@@ -19,6 +19,8 @@ h2{
 }
 body{
     background-image: url("bg.png");
+ 
+    text-align: center;
 }
 main{
     text-align: center;
@@ -26,11 +28,16 @@ main{
 }
 
 #Navi{
-    overflow: hidden;
+    
+    position: fixed;
+    top: 0%;
     background-color: grey;
-    float: right;
-    display: block;
-    text-align: right;
-    padding: 10px;
+    color: black;
     text-decoration: none;
+    font-size: 20pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-stretch: semi-condensed;
+    text-align: center;
+    
 }
