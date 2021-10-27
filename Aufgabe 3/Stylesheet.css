@@ -1,0 +1,36 @@
+
+
+h1{
+    font-size: 50pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-stretch: expanded;
+    color: black;
+    text-align: center;
+}
+
+h2{
+    font-size: 25pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-stretch: extra-expanded;
+    color: black;
+    text-align: center;
+}
+body{
+    background-image: url("bg.png");
+}
+main{
+    text-align: center;
+    padding: 50px ;
+}
+
+#Navi{
+    overflow: hidden;
+    background-color: grey;
+    float: right;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    text-decoration: none;
+}
