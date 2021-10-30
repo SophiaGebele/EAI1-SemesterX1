@@ -26,6 +26,7 @@ body{
     font-stretch: expanded;
     font-size: 15pt;
     z-index: 2;
+    text-align: center;
 }
 
 #kontakt{
@@ -45,11 +46,6 @@ body{
 
 #wort a:hover{
     color: red;
-}
-
-.facebook :hover{
-    background-color:black;
-    padding: 10px;
 }
 
 h1{
@@ -133,3 +129,10 @@ h4, h5{
     top: 100px;
     background-color: grey;
 }
+
+.portfolioFoto{
+    padding-left: 80px;
+    margin-top: 20px;
+}
+
+

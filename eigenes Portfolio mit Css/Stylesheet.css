@@ -1,0 +1,51 @@
+
+
+h1{
+    font-size: 50pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-stretch: expanded;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+h2{
+    font-size: 25pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-stretch: extra-expanded;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+body{
+    background-image: url("bg.png");
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0%;
+}
+main{
+    text-align: center;
+    padding-top: 50px;
+    text-decoration: none;
+}
+
+.Navi{
+    
+    right: 20%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color:black;
+    font-size: 20pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-stretch: semi-condensed;
+    top: 0%;
+    position:fixed;
+    
+}
+

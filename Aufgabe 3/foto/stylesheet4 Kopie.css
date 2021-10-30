@@ -26,6 +26,7 @@ body{
     font-stretch: expanded;
     font-size: 15pt;
     z-index: 2;
+    text-align: center;
 }
 
 #kontakt{
@@ -45,11 +46,6 @@ body{
 
 #wort a:hover{
     color: red;
-}
-
-.facebook :hover{
-    background-color:black;
-    padding: 10px;
 }
 
 h1{
@@ -101,35 +97,15 @@ h3{
     padding-left: 630px;
 }
 
-.fotos{
-    top: 0px;
-    padding-left: 310px;
-}
 
-.videos{
-    top: 0%;
-    padding-left: 310px;
-}
 
-h4, h5{
+.aboutMeText{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20pt;
     font-weight: normal;
     font-stretch: normal;
-    color: red;
-    padding-left: 310px;
-}
-
-.textKontakt{
-    top: 100px;
-    justify-content: center;
+    color: grey;
     text-align: center;
-    width: 200px;
-    color: black;
-
-}
-
-.feld1{
-    top: 100px;
-    background-color: grey;
+    margin-left: 0px;
+    margin-top: 50px;
 }
