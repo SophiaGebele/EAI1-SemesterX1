@@ -1,0 +1,772 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-color: black;
+    text-align: center;
+}
+/* startseite*/
+.sommer{
+    margin-left: 310px;
+    display: block;
+    background-color:#CD5C5C;
+    width: 800px;
+    height:100px;
+    position: absolute;
+    text-align: center;
+    font-size: 40pt;
+    font-weight: bold;
+    margin-top: 400px;
+}
+
+.sommer a{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    left: 230px;
+}
+
+.winter{
+    margin-left: 310px;
+    display: block;
+    background-color: #80c4de;
+    width: 800px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    font-size: 40pt;
+    font-weight: bold;
+    top: 200px;
+}
+
+.winter a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 20px;
+    text-align: center;
+
+}
+/*startseite ende*/
+
+/*back to start button*/
+#button1{
+    background-color: grey;
+    width: 150px;
+    height: 50px;
+    top: 0px;
+    right: 50px;
+    position: fixed;
+}
+
+#button1 a{
+    font-size: 10pt;
+    text-decoration: none;
+    color: black;
+    top: 15px;
+    position: fixed;
+    right: 80px;
+}
+#button2{
+    background-color: grey;
+    width: 150px;
+    height: 50px;
+    top: 60px;
+    position: fixed;
+    right: 50px;
+}
+#button2 a {
+    font-size: 10pt;
+    text-decoration: none;
+    color: black;
+    top: 77px;
+    position: fixed;
+    right: 77px;
+}
+
+#button3{
+    background-color: grey;
+    width: 150px;
+    height: 50px;
+    top: 125px;
+    position: fixed;
+    right: 50px;
+}
+#button3 a{
+    font-size: 10pt;
+    text-decoration: none;
+    color: black;
+    top: 140px;
+    position: fixed;
+    right: 77px;
+}
+
+
+/*titel winterkarten*/
+.Wintertitle{
+    font-size: 50pt;
+    text-align: center;
+    color: #80c4de;
+    font-weight: bolder;
+    top: 0%;
+}
+
+
+/*winter 1*/
+.winter-station1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 25pt;
+    top: 5px;
+    position: relative;
+}
+.winter-station1{
+    background-color: #80c4de;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 100px;
+}
+
+
+/*winter2*/
+.winter-station2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 25pt;
+    top: 5px;
+    position: relative;
+      
+}
+.winter-station2{
+    background-color: #80c4de;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 200px;
+}
+
+
+/*winter3*/
+.winter-station3{
+    background-color: #80c4de;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 300px;
+}
+.winter-station3 a {
+    text-decoration: none;
+    color: white;
+    font-size: 25pt;
+    top: 5px;
+    position: relative;
+      
+}
+
+
+/*winter4*/
+.winter-station4{
+    background-color: #80c4de;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 400px;
+}
+.winter-station4 a {
+    text-decoration: none;
+    color: white;
+    font-size: 25pt;
+    top: 5px;
+    position: relative;
+}
+
+
+/*winter5*/
+.winter-station5{
+    background-color: #80c4de;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 500px;
+}
+.winter-station5 a{
+    text-decoration: none;
+    color: white;
+    font-size: 25pt;
+    top: 5px;
+    position: relative;
+}
+
+
+
+/*sommerkarten titel*/
+.Sommertitle{
+    font-size: 50pt;
+    text-align: center;
+    color: #CD5C5C;
+    font-weight: bolder;
+    top: 0%;
+}
+
+
+/*sommer stationen*/
+.sommer-station1{
+    background-color: #CD5C5C;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 100px;
+}
+
+.sommer-station2{
+    background-color: #CD5C5C;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 200px;
+}
+
+.sommer-station3{
+    background-color: #CD5C5C;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 300px;
+}
+
+.sommer-station4{
+    background-color: #CD5C5C;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 400px;
+}
+
+.sommer-station5{
+    background-color: #CD5C5C;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    left: 310px;
+    top: 500px;
+}
+.sommer-station1 a, .sommer-station2 a, .sommer-station3 a,
+.sommer-station4 a, .sommer-station5 a{
+    text-decoration: none;
+    color: white;
+    font-size: 25pt;
+    top: 5px;
+    position: relative;
+}
+
+p{
+    background-image: url(Winter-Material/Station_1_Positionierung/bg.png);
+    width:23px;
+    height: 33px;
+}
+.pinguin{
+    z-index: 5;
+    position: absolute;
+    top: 380px;
+    right: 400px;
+    background-color: transparent;
+    
+}
+.strauch{
+    z-index: 4;
+    position: absolute;
+    left: 340px;
+    top: 110px;
+}
+.text-winter1{
+    color: white;
+    background-image: url(Winter-Material/Station_1_Positionierung/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 420px;
+    margin-top: 100px;
+    z-index: 3;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+#merry-christmas-from{
+    font-size: 20pt;
+    font-weight: bolder;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+#Furtwangen{
+    font-size: 20pt;
+    font-weight: bolder;
+    position: absolute;
+    top: 90px;
+    left: 60px;
+}
+#LieberEmpfaenger{
+    font-size: 10pt;
+    position: absolute;
+    top: 200px;
+    left: 60px;
+}
+#pinguin-text{
+    font-size: 10pt;
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    text-align: left;
+}
+#abschluss-pinguin{
+    font-size: 10pt;
+    position: absolute;
+    top: 340px;
+    left: 60px;
+    text-align: left;
+}
+
+/*winterstation2*/
+#winterstation2-bild{
+    position: relative;
+    top: 130px;
+
+}
+
+/*winterstation3*/
+.text-station-3{
+    background-image: url(Winter-Material/Station_3_Hover/wrapperbg.png);
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    width: 600px;
+    height: 410px;
+}
+
+.stern{
+    position: absolute;
+    top: 350px;
+    left: 560px;
+}
+.stern-weiss{
+    position: absolute;
+    left: 800px;
+    top: 400px;
+}
+.stern-weiss2{
+    position: absolute;
+    top: 420px;
+    left: 460px;
+}
+
+.stern-weiss3{
+    position: absolute;
+    top: 460px;
+    left: 650px;
+}
+
+#Positionierung{
+    font-size: 25pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: left;
+    position: absolute;
+    left: 50px;
+    top: 70px
+}
+
+#Hover-Bild{
+    font-size: 25pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: left;
+    position: absolute;
+    left: 50px;
+    top: 100px
+}
+
+/*winterstation4*/
+.Winterstation4{
+    position: relative;
+    top: 80px;
+}
+
+/*winterstation5*/
+.text-station5{
+    background-image: url(Winter-Material/Station_5_Forms/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    position: relative;
+    top: 150px;
+    left: 420px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    color: white;
+}
+
+#formular{
+    font-size: 30pt;
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+#Dein-Name{
+    font-size: 15pt;
+    position: relative;
+    top: 60px;
+    left: 50px;
+}
+
+.Name-Eingabe5{
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    left: 475px;
+    top: 290px;
+    background-color: white;
+    z-index: 5;
+}
+
+#Deine-Nachricht{
+    font-size: 15pt;
+    position: relative;
+    left: 50px;
+    top: 100px;
+}
+
+.Nachricht-Eingabe5{
+    width: 250px;
+    height: 50px;
+    left: 475px;
+    position: absolute;
+    top: 350px;
+    background-color: white;
+}
+
+#Geschenk{
+    font-size: 15pt;
+    position: relative;
+    left: 50px;
+    top: 160px;
+}
+
+#Ja{
+    font-size: 15pt;
+    left: 80px;
+    top: 170px;
+    position: relative;
+}
+
+#Nein{
+    font-size: 15pt;
+    left: 145px;
+    top: 147px;
+    position: relative;
+}
+
+.Geschenk-Eingabe1{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    left: 490px;
+    top: 450px;
+    position: absolute;
+}
+
+.Geschenk-Eingabe2{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    left: 555px;
+    top: 450px;
+    position: absolute;
+}
+
+#abschicken{
+    font-size: 10pt;
+    left: 50px;
+    color: black;
+    position: relative;
+    background-color: white;
+    height: 12px;
+    top: 170px;
+    font-family:monospace;
+    padding: 5px;
+    width: 80px;
+}
+
+.text-sommer1{
+    font-family: sans-serif;
+    color: white;
+    background-image: url(Sommer-Material/Station_1_Positionierung/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    top: 200px;
+    left: 400px;
+    position: absolute;
+    text-align: left;
+}
+
+#Willkommen{
+    font-size: 15pt;
+    position: relative;
+    top: 40px;
+    left: 100px;
+}
+
+#FurtwangenSommer{
+    font-size: 15pt;
+    position: relative;
+    top: 40px;
+    left: 100px;
+}
+
+#Bacon{
+    font-size: 10pt;
+    position: relative;
+    top: 60px;
+    left: 80px;
+}
+
+#fliesstext-sommer1{
+    font-size: 10pt;
+    position: relative;
+    top: 90px;
+    left: 80px;
+    width: 430px;
+}
+
+#pinguin-sommer1{
+    position: absolute;
+    top: 430px;
+    right: 400px;
+}
+
+#muscheln{
+    position: absolute;
+    top: 500px;
+    left: 330px;
+}
+
+.text-sommer2{
+    background-image: url(Sommer-Material/Station_2_Hover/wrapperbg.png);
+    color: white;
+    font-size: 20pt;
+    font-family: serif;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    top: 200px;
+    left: 400px;
+    text-align: left;
+}
+
+#Positionierung-sommer2{
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+#Hover-sommer2{
+    position: relative;
+    top: 80px;
+    left: 50px;
+}
+
+#muschel1{
+    top: 400px;
+    position: absolute;
+    left: 600px;
+}
+#muschel2{
+    top: 500px;
+    position: absolute;
+    left: 800px;
+}
+#muschel3{
+    top: 500px;
+    position: absolute;
+    left: 440px;
+}
+
+/*sommerstation3*/
+.text-sommer3{
+    font-family: serif;
+    color: white;
+    background-image: url(Sommer-Material/Station_3_Forms/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    top: 200px;
+    left: 400px;
+    position: relative;
+    text-align: left;
+}
+
+#Formular-sommer3{
+    position: relative;
+    top: 40px;
+    left: 60px;
+    font-size: 25pt;
+}
+#Name-sommer3{
+    position: relative;
+    top: 60px;
+    left: 50px;
+    font-size: 15pt;
+}
+#Name-Eingabe-3{
+    position: absolute;
+    left: 460px;
+    top: 330px;
+    width: 200px;
+    height: 20px;
+    background-color: white;
+}
+
+#Urlaubsgruss{
+    position: relative;
+    top: 90px;
+    left: 50px;
+    font-size: 15pt;
+}
+
+#Gruss-Eingabe{
+    position: absolute;
+    top: 390px;
+    width: 250px;
+    height: 100px;
+    background-color: white;
+    left: 460px;
+}
+#choose{
+    font-size: 15pt;
+    position: relative;
+    top: 200px;
+    left: 50px;
+}
+#eins{
+    font-size: 15pt;
+    position: relative;
+    left: 80px;
+    top: 205px;
+}
+#zwei{
+    font-size: 15pt;
+    position: relative;
+    left: 160px;
+    top: 180px;
+}
+#eins-kreis{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    left: 465px;
+    top: 525px;
+    position: absolute;
+}
+#zwei-kreis{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    left: 540px;
+    top: 525px;
+    position: absolute;   
+}
+#feld-frage{
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    left: 465px;
+    top: 550px;
+}
+.text-sommer4{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-image: url(Sommer-Material/Station_4_Spaltenlayout/wrapperbg.png);
+    width: 600px;
+    height: 400px;
+    top: 200px;
+    left: 400px;
+    position: relative;
+    text-align: left;
+}
+#spaltenlayout{
+    color: white;
+    font-size: 20pt;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+#cheese{
+    font-size: 10pt;
+    width: 100px;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    text-align: center;
+}
+#air{
+    font-size: 10pt;
+    width: 100px;
+    position: relative;
+    top: 40px;
+    left: 200px;
+    text-align: center;
+}
+#feta{
+    font-size: 10pt;
+    width: 100px;
+    position: relative;
+    top: -30px;
+    left: 350px;
+    text-align: center;
+}
+#blue{
+    font-size: 10pt;
+    width: 150px;
+    position: relative;
+    top: 00px;
+    left: 50px;
+    text-align: center;
+}
+#dolcelatte{
+    font-size: 10pt;
+    width: 180px;
+    position: relative;
+    top: -60px;
+    left: 290px;
+    text-align: center;
+}
+/*station5 sommer*/
+#bild-station5-sommer{
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
