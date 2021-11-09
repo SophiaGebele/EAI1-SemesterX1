@@ -285,13 +285,11 @@ p{
     width:23px;
     height: 33px;
 }
-.pinguin{
-    z-index: 5;
+#neu{
     position: absolute;
-    top: 380px;
-    right: 400px;
-    background-color: transparent;
-    
+    top: 300px;
+    left: 750px;
+    z-index: 5;
 }
 .strauch{
     z-index: 4;
@@ -360,9 +358,11 @@ p{
     top: 200px;
     left: 400px;
     width: 600px;
-    height: 410px;
+    height: 400px;
 }
-
+.stern:hover{
+    background-image: url(Winter-Material/Station_3_Hover/stern_hover.png);
+}
 .stern{
     position: absolute;
     top: 350px;
