@@ -1,7 +1,7 @@
 /*Afrika*/
 var africa2008 = 1028.0;
 var africa2018 = 1235.5;
-var africaAnstiegProzent=(africa2008/africa2018 -1)*100
+var africaAnstiegProzent=(africa2018/africa2008 -1)*100
 var africaWelt2018=(africa2018/weltweit2018)*100;
 var africaAnstiegKG=africa2018-africa2008;
 /*Weltweit*/
@@ -9,31 +9,31 @@ var weltweit2018= africa2018+south2018+europa2018+north2018+asia2018+australia20
 /*suedamerika*/
 var south2008 = 1132.6;
 var south2018 = 1261.5;
-var southAntiegProzent=(south2008/south2018-1)*100;
+var southAntiegProzent=(south2018/south2008-1)*100;
 var southWelt2018=(south2018/weltweit2018)*100;
 var southAnstiegKG=south2018-south2008;
 /*europa*/
 var europa2008 = 4965.7;
 var europa2018 = 4209.3;
-var europaAnstiegProzent=(europa2008/europa2018-1)*100;
+var europaAnstiegProzent=(europa2018/europa2008-1)*100;
 var europaWelt2018=(europa2018/weltweit2018)*100
 var europaAnstiegKG=europa2018-europa2008;
 /*nordamerika*/
 var north2008 = 6600.4;
 var north2018 = 6035.6;
-var northAnstiegProzent=(north2008/north2018-1)*100;
+var northAnstiegProzent=(north2018/north2008-1)*100;
 var northWelt2018=(north2018/weltweit2018)*100;
 var northAnsteigKG=north2018-north2008;
 /*asien*/
 var asia2008 = 12954.7;
 var asia2018 = 16274.1;
-var asiaAnstiegProzent=(asia2008/asia2018-1)*100;
+var asiaAnstiegProzent=(asia2018/asia2008-1)*100;
 var asiaWelt2018=(asia2018/weltweit2018)*100;
 var asiaAnstiegKG=asia2018-asia2008;
 /*australien*/
 var australia2008 = 1993;
 var australia2018 = 2100.5;
-var australiaAnstiegProzent=(australia2008/australia2018-1)*100;
+var australiaAnstiegProzent=(australia2018/australia2008-1)*100;
 var australiaWelt2018=(australia2018/weltweit2018)*100;
 var australiaAnstiegKG=australia2018-australia2008;
 
