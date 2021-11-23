@@ -11,11 +11,14 @@ html, body {
 nav {
     margin-bottom: 60px;
 }
+.EUROPA:hover, .NORDAMERIKA:hover, .SUEDAMERIKA:hover, .AFRIKA:hover, .ASIEN:hover, .AUSTRALIEN:hover {
+    background-color: green;
+}
 
 section {
     display: inline-block;
     margin: 20px;
-    width: 200px;
+    width: 500px;
 }
 
 .chartWrapper {
@@ -23,16 +26,15 @@ section {
     display: inline-block;
     width: 50px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.5);
+    background: white;
 }
 .chartWrapper .chart {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 20%;
-    background: white;
+    background: green;
 }
-
 footer p {
     margin-top: 50px;
     font-size: 10px;
