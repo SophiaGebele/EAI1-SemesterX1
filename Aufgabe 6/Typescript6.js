@@ -2,8 +2,6 @@
 var african = "Africa";
 var africa2008 = 1028.0;
 var africa2018 = 1235.5;
-/*Weltweit*/
-var weltweit2018 = africa2018 + south2018 + europa2018 + north2018 + asia2018 + australia2018;
 /*suedamerika*/
 var americas = "southamerica";
 var south2008 = 1132.6;
@@ -24,6 +22,8 @@ var asia2018 = 16274.1;
 var australien = "australien";
 var australia2008 = 1993;
 var australia2018 = 2100.5;
+/*Weltweit*/
+var weltweit2018 = africa2018 + south2018 + europa2018 + north2018 + asia2018 + australia2018;
 window.addEventListener("load", function () {
     document.querySelector(".EUROPA").addEventListener("click", function () {
         emissionen(europa, europa2018, europa2008);
@@ -52,7 +52,7 @@ function emissionen(NameRegion, emission_2018, emission_2008) {
     document.getElementById("AnstiegProzent").innerHTML = Math.round((emission_2018 - emission_2008) / emission_2008 * 100 * 100 / 100) + "%";
     document.getElementById("AnstiegWert").innerHTML = `${Math.round((emission_2018 - emission_2008) * 100) / 100}`;
     var Balken = document.querySelector(".chart");
-    Balken.style.height = emission_2018/ 1000+ "px";
+    Balken.style.height = emission_2018 / 100 + "px";
 }
 ;
 //# sourceMappingURL=Typescript6.js.map

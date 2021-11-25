@@ -1,0 +1,68 @@
+body{
+    background-color: #000;
+}
+
+#Flowchart{
+    margin-top: 20px;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15pt;
+    margin-right: 20px;
+    background-color: #FF1493;
+    float: right;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+background-color: #FF8800;
+}
+
+#Button1, #Button2, #Button3, #Button4, #Button5, 
+#Button6, #Button7, #Button8, #Button9{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    align-self: center;
+    margin: 5px;
+    opacity: 50%;
+    border-radius: 10px;
+}
+
+.Pads{
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 450px;
+}
+
+#Play{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    margin-left: 620px;
+    opacity: 50%;
+}
+
+#Play:hover{
+    opacity: 100%;
+}
+
+#Button1, #Button2, #Button3{
+    background-color: #27408B;
+}
+
+#Button4, #Button5, #Button6, #Button7{
+    background-color: #ff1493;
+}
+
+#Button8, #Button9{
+    background-color: #FF8800;
+}
+
+#Button1:hover, #Button2:hover, #Button3:hover, #Button4:hover, #Button5:hover, 
+#Button6:hover, #Button7:hover, #Button8:hover, #Button9:hover{
+    opacity: 100%;
+} 
+

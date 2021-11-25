@@ -3,11 +3,6 @@ var african:string="Africa";
 var africa2008 = 1028.0;
 var africa2018 = 1235.5;
 
-
-/*Weltweit*/
-var weltweit2018= africa2018+south2018+europa2018+north2018+asia2018+australia2018;
-
-
 /*suedamerika*/
 var americas:string="southamerica";
 var south2008 = 1132.6;
@@ -37,7 +32,8 @@ var australien:string="australien";
 var australia2008 = 1993;
 var australia2018 = 2100.5;
 
-
+/*Weltweit*/
+var weltweit2018= africa2018+south2018+europa2018+north2018+asia2018+australia2018;
 
 window.addEventListener("load", function() {
     document.querySelector(".EUROPA").addEventListener("click", function() { 
@@ -76,5 +72,5 @@ function emissionen (NameRegion: string, emission_2018: number, emission_2008: n
     document.getElementById("AnstiegWert").innerHTML = `${Math.round((emission_2018 - emission_2008) * 100) / 100}`; 
     
     var Balken:HTMLElement = document.querySelector(".chart")
-    Balken.style.height = emission_2018 + "px";
+    Balken.style.height = emission_2018/100 + "px";
 };
