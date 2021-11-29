@@ -45,7 +45,7 @@ window.addEventListener('load', function playSample(){
     });
 
     
-
+    //knoepfe
     var Knopf1:HTMLElement=document.getElementById('Button1');
     var Knopf2:HTMLElement=document.getElementById('Button2');
     var Knopf3:HTMLElement=document.getElementById('Button3');
@@ -57,7 +57,8 @@ window.addEventListener('load', function playSample(){
     var Knopf9:HTMLElement=document.getElementById('Button9');
     var Knopf10:HTMLElement=document.getElementById('Play');
 
-   var sound1:HTMLAudioElement=new Audio('assets/A.mp3');
+    //sounds
+    var sound1:HTMLAudioElement=new Audio('assets/A.mp3');
     var sound2:HTMLAudioElement=new Audio('assets/C.mp3');
     var sound3:HTMLAudioElement=new Audio('assets/F.mp3');
     var sound4:HTMLAudioElement=new Audio('assets/G.mp3');
@@ -67,19 +68,24 @@ window.addEventListener('load', function playSample(){
     var sound8:HTMLAudioElement=new Audio('assets/laugh-2.mp3');
     var sound9:HTMLAudioElement=new Audio('assets/snare.mp3');
 
+  
 
-    var beat:HTMLAudioElement[]=[new Audio('assets/hithat.mp3'),new Audio('assets/kick.mp3'), new Audio('assets/snare.mp3')]; //index 0,1,2
+    
 
-    document.getElementById("Play").addEventListener("click", function Ton(){ 
-   setInterval(function() {
-       sound5.play()
-     }, 500);
-     setInterval(function() {
-        sound6.play()
-      }, 1000);
-      setInterval(function() {
-        sound9.play()
-      }, 1500);
+
+    var beat:HTMLAudioElement[]=[sound1,new Audio('assets/kick.mp3'), new Audio('assets/snare.mp3')]; //index 0,1,2
+
+    let zeahlervariable = 0;
+
+
+    setInterval(function() {
+
+        beat[zeahlervariable].play();
+
+        zeahlervariable++;
+
+      }, 500);
+
     
 })
-})
+
