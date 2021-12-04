@@ -68,12 +68,9 @@ window.addEventListener('load', function playSample(){
     var sound8:HTMLAudioElement=new Audio('assets/laugh-2.mp3');
     var sound9:HTMLAudioElement=new Audio('assets/snare.mp3');
 
-  
-
-    
 
 
-    var beat:HTMLAudioElement[]=[sound1,new Audio('assets/kick.mp3'), new Audio('assets/snare.mp3')]; //index 0,1,2
+    var beat:HTMLAudioElement[]=[sound1,sound2,sound3]; //index 0,1,2
 
     let zeahlervariable = 0;
 
