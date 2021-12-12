@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Stylesheet9.css">
-    <script src="/EAI1-SemesterX1/Aufgabe 9/Script9.js"></script>
+    <script src="Script9.js"></script>
     <title>ToDoApp-AufgabeNummer9</title>
 </head>
 <body>
-    
-        <div id="titel">To Do APP:</div>
-        <p><div id="total">Insgesamt<div id="totalZahl">6</div>Erledigungen eingetragen.</div></p>
+  
+        <div class="app" id="appapp">
 
-        <div class="schachteln">
-        <button id="bla"></button>
-        <input placeholder="Erledigung hinzufuegen" type="text" name="Erledigung" id="schachtelEingabe">      <!--Platzhalter zu eingeben-->
+            <div id="titel">To Do APP:</div>
+            <br>
+            <div id="total"><div id="totalZahl">0</div>Erledigungen eingetragen.</div>
+            <br>
+                
         
-        <div class="2" id="schachtelAufgabe">     
-        <i id="trash" class="fas fa-trash-alt" ></i>        <!--trash Icon-->
-        <div id="Aufgaben"></div>                           <!--Platzhalter fuer Aufgabe-->
-        <i id="circle" class="fas fa-play-circle"></i>      <!--circle Icon-->
-        </div>
+                    <input placeholder="Erledigung hinzufuegen" type="text" id="schachtelEingabe" required>     <!--Platzhalter zum eingeben-->
+                    
+                    <div class="Ausgabe" id="schachtelAufgabe">     
+                    <i id="trash" class="fas fa-trash-alt" ></i>        <!--trash Icon-->
+                          
+                    <div id="Aufgaben"></div>                          <!--Platzhalter fuer Aufgaben-->
+                    
+                    <i id="circle" class="fas fa-play-circle"></i>     <!--circle Icon-->
+                
 
-        <button id="loeschen">Alle loeschen</button>
+            <button id="loeschen">Alle loeschen</button>                <!--Button zum ALLE loeschen-->
         
         </div>
+   
+        <!--Ich wollte zuerst diesen Entwurf, habe allerdings nicht geschafft, es mit Typescript so umzusetzen. -->
 
+</div>
 </body>
 </html>
