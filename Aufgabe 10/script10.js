@@ -3,18 +3,36 @@ window.addEventListener("load", function () {
     const todoliste = document.querySelector("ul");
     const inputtodo = document.querySelector("input");
     let index = 0;
+    let erledigt = 0;
+    let offen = 0;
+    console.log("anfangs-Variablen verstanden");
     /*Counter*/
     function counter() {
         document.getElementById("counter").innerHTML = String(index);
+        console.log("Counter Funktion");
+    }
+    /*open*/
+    function open() {
+        document.getElementById("open").innerHTML = String(offen);
+        console.log("Funktion Counter Open");
+    }
+    /*done*/
+    function done() {
+        document.getElementById("done").innerHTML = String(erledigt);
+        console.log("Funktion Counter done");
     }
     /*hinzufügen einer Aufgabe*/
     function addtask() {
         index++;
         counter();
+        offen++;
+        open();
+        console.log("index und offen hochgezaehlt");
         /*Liste */
         const todoli = document.createElement("li");
         todoli.classList.add("todotext");
         todoli.innerHTML = inputtodo.value;
+        console.log("listen-punkt erschaffen");
         /*Buttons erstellen, mit Icons */
         const checkcircle = document.createElement("div");
         checkcircle.classList.add("circle");
@@ -32,10 +50,12 @@ window.addEventListener("load", function () {
         /*Wert bei hinzufügen der Aufgabe zurücksetzen*/
         inputtodo.value = "";
         /*Klick*/
-        deletetask.addEventListener("click", function () { todoliste.removeChild(todoli); index--; counter(); });
+        deletetask.addEventListener("click", function () { todoliste.removeChild(todoli); index--; counter(); offen--; open(); });
+        console.log("geloescht, index und offen runter gezaehlt");
         check.addEventListener("click", function () { if (todoli.style.opacity = "100%") {
             todoli.style.opacity = "20%";
-        } });
+        } erledigt++; done(); });
+        console.log("neue darstellung, erledigt hochgezaehlt");
     }
     /*addtask*/
     document.addEventListener("keydown", function (event) {
@@ -44,4 +64,4 @@ window.addEventListener("load", function () {
         }
     });
 });
-//# sourceMappingURL=u1.js.map
+//# sourceMappingURL=script10.js.map
