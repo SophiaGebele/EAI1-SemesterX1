@@ -1,3 +1,4 @@
+declare var Artyom: any;
 window.addEventListener("load", function(): void {
 
     /*Variablen*/
@@ -7,6 +8,9 @@ window.addEventListener("load", function(): void {
     let erledigt: number=0;
     let offen:number=0;
     console.log("anfangs-Variablen verstanden");
+    let checked: boolean = false;
+    let microphoneClicked: boolean = false;
+    let micro:HTMLElement=document.getElementById("microphone");
     
     /*Counter*/
     function counter(): void {
@@ -23,6 +27,13 @@ window.addEventListener("load", function(): void {
         document.getElementById("done").innerHTML=String(erledigt);
         console.log("Funktion Counter done");
     }
+
+    function record():void{
+        let microfone :HTMLElement=document.createElement("button");
+        microfone.classList.add("Voice");
+        microfone.setAttribute("class","fa-microphone-alt");
+    }
+    
     
     /*hinzufügen einer Aufgabe*/
     function addtask(): void {
@@ -37,7 +48,7 @@ window.addEventListener("load", function(): void {
         todoli.classList.add("todotext");
         todoli.innerHTML = inputtodo.value; 
         console.log("listen-punkt erschaffen");
-    
+        
         /*Buttons erstellen, mit Icons */
         const checkcircle: HTMLElement = document.createElement("div");
         checkcircle.classList.add("circle");
@@ -52,10 +63,6 @@ window.addEventListener("load", function(): void {
         deletetask.classList.add("trash");
         deletetask.setAttribute("class", "fa fa-trash-o");
         todoli.appendChild(deletetask);
-    
-        
-     
-    
         
         todoliste.appendChild(todoli);
         console.log(todoli);
@@ -76,4 +83,51 @@ window.addEventListener("load", function(): void {
         if (event.keyCode == 13) {
             addtask (); }});
     
-    });
+     //Spracheingabe 
+     const artyom: any = new Artyom();
+    
+     artyom.addCommands([{
+         indexes: ["erstelle Aufgabe *", "aufgabe erstellen *"],
+         smart: true,
+         action: function(i: any, wildcard: string): void {
+             console.log("Neue Aufgabe wird erstellt: " + wildcard);
+             artyom.say("Neue Aufgabe wird erstellt: " + wildcard);
+             addtask(wildcard);
+         }
+         }, {
+         indexes: ["Lösche alle Aufgaben", "Lösche", "Löschen"],
+         smart: false,  
+         action: function(): void {
+             todoliste.innerHTML = "";
+             artyom.say("Alle Aufgaben wurden gelöscht");
+         }        
+         }]);
+ 
+     function startContinuousArtyom(): void {
+         artyom.fatality();
+         setTimeout(
+             function(): void {
+                 artyom.initialize({
+                     lang: "de-DE",
+                     continuous: true,
+                     listen: true,
+                     interimResults: true,
+                     debug: true, 
+                 })
+             },
+             250);
+            }   
+            micro.addEventListener("click", function(): void {
+                if (microphoneClicked=false) {
+                    startContinuousArtyom();
+                    microphoneClicked = true; 
+                } else {
+                    artyom.fatality();
+                    console.log("No!");
+                    microphoneClicked = false;
+                }
+            
+           
+           
+               })
+    })

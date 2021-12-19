@@ -12,7 +12,11 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
-
+.microphone{
+    width: 50px;
+    height: 70px;
+    background-color: var(--weiss);
+}
 body{
     background-color:var(--schwarz);
     color: var(--weiss);
@@ -36,15 +40,6 @@ input{
     background-color: #000;
     color: var(--weiss);
     border-radius: 3px;
-}
-#Flowchart9{
-    left: 800px;
-    text-decoration: none;
-    background-color: var(--weiss); 
-    color: var(--schwarz);
-    width: 80px;
-    position: absolute;
-    top: 10px;
 }
 
 a {
