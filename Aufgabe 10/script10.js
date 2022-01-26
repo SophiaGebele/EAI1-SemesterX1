@@ -102,7 +102,7 @@ window.addEventListener("load", function () {
         }, 250);
     }
     micro.addEventListener("click", function () {
-        if (microphoneClicked = false) {
+        if (microphoneClicked == false) {
             startContinuousArtyom();
             microphoneClicked = true;
         }
