@@ -11,7 +11,6 @@ for (var a = 0; a < farben.length; a++) {
         Ziehstapel.push(Karten);
     }
 }
-console.log(Ziehstapel.length, "Ziehstapel nach For-Schleife");
 function mischen(Kartendeck) {
     for (var a = 0; a < 1337; a++) {
         var Position1 = Math.floor((Math.random() * Kartendeck.length));
@@ -24,9 +23,8 @@ function mischen(Kartendeck) {
 mischen(Ziehstapel);
 var SpielerKarten = [];
 var ComputerKarten = [];
-console.log(Ziehstapel.length, "Ziehstapel");
-for (var c = 0; c < 4; c++) //austeilen von Spielkarten 4 an PC und 4 an Spieler
- {
+console.log(Ziehstapel.length, "Ziehstapel alle Karten");
+for (var c = 0; c < 4; c++) {
     SpielerKarten.push(Ziehstapel.pop());
     ComputerKarten.push(Ziehstapel.pop());
 }
@@ -57,7 +55,7 @@ window.addEventListener("load", function () {
         }
     }
     function Aktualisierung() {
-        document.getElementById("Ablegestapel").innerHTML = ""; //leeren 
+        //document.getElementById("Ablegestapel").innerHTML=""; //leeren 
         document.getElementById("ComputerKarten").innerHTML = ""; //leeren
         document.getElementById("SpielerKarten").innerHTML = ""; //leeren
         for (var d = 0; d < SpielerKarten.length; d++) {
@@ -65,23 +63,25 @@ window.addEventListener("load", function () {
             var werte = document.createElement("p");
             werte.innerHTML = SpielerKarten[d].wertigkeit;
             var farben = document.createElement("i");
-            farben.innerHTML = SpielerKarten[d].farbspektrum;
+            //farben.innerHTML=SpielerKarten[d].farbspektrum;
+            //oberes kann fuer mehr Barrierefreiheit hinzugefuegt werde
+            //falls hinzugefuegt, steht das Wort der Farbe in der Karte mit drin
             farben.className = SpielerKarten[d].farbspektrum;
             document.getElementById("SpielerKarten").appendChild(BasicKarte);
             BasicKarte.appendChild(werte);
             werte.appendChild(farben);
-            BasicKarte.className = SpielerKarten[d].farben;
-            console.log(SpielerKarten.length, "huuu");
-            if (SpielerRunde) { // Ablagestapel                                                             //Ablagestapel
+            BasicKarte.className = SpielerKarten[d].farbspektrum;
+            if (SpielerRunde = true) {
                 if (SpielerKarten[d].farbspektrum == Ablegestapel[0].farbspektrum ||
                     SpielerKarten[d].wertigkeit == Ablegestapel[0].wertigkeit) {
                     BasicKarte.addEventListener("click", function () {
                         if (!Spielende) {
-                            Ablegestapel.unshift(SpielerKarten[i]),
-                                SpielerKarten.splice(i, 1),
+                            SpielerKarten.splice(d, 1),
+                                Ablegestapel.unshift(SpielerKarten[d]),
                                 SpielerEnde();
                         }
                     });
+                    console.log(SpielerKarten.length);
                 }
             }
         }
@@ -90,20 +90,25 @@ window.addEventListener("load", function () {
             var werte = document.createElement("p");
             werte.innerHTML = ComputerKarten[e].wertigkeit;
             var farben = document.createElement("i");
-            farben.innerHTML = ComputerKarten[e].farbspektrum;
+            //farben.innerHTML=ComputerKarten[e].farbspektrum;
+            //oberes kann fuer mehr Barrierefreiheit hinzugefuegt werde
+            //falls hinzugefuegt, steht das Wort der Farbe in der Karte mit drin
             farben.className = ComputerKarten[e].farbspektrum;
             document.getElementById("ComputerKarten").appendChild(PCKarte);
             PCKarte.appendChild(werte);
             werte.appendChild(farben);
-            PCKarte.className = ComputerKarten[e].farben;
+            PCKarte.className = ComputerKarten[e].farbspektrum;
         }
-        document.getElementById("Ablegestapel").innerHTML = "";
-        var KarteAbgelegt = document.createElement("div");
-        var werteAbgelegt = document.createElement("p");
-        document.getElementById("Ablagestapel").appendChild(KarteAbgelegt);
-        KarteAbgelegt.appendChild(werteAbgelegt);
-        werteAbgelegt.innerHTML = Ablegestapel[0].wertigkeit;
-        KarteAbgelegt.className = Ablegestapel[0].farbspektrum;
+        var ablageKarte = document.createElement("div");
+        var werte = document.createElement("p");
+        document.getElementById("Ablegestapel").appendChild(ablageKarte);
+        var farben = document.createElement("i");
+        ablageKarte.appendChild(werte);
+        werte.appendChild(farben);
+        farben.innerHTML = Ablegestapel[0].farbspektrum;
+        farben.className = Ablegestapel[0].farbspektrum;
+        werte.innerHTML = Ablegestapel[0].wertigkeit;
+        ablageKarte.className = Ablegestapel[0].farbspektrum;
     }
     function SpielerEnde() {
         SpielerRunde = !SpielerRunde;

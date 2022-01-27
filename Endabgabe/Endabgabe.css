@@ -101,7 +101,6 @@ a{
 #ComputerKarten>div{
     width: 80px;
     height:120px;
-    background-color: var(--weiss);
     position: relative;
     border-radius:10px ;
     display: inline-flex;
@@ -131,20 +130,26 @@ a{
 
 /*Station fuer Karten in der Mitte zum ziehen und ablegen*/
 
-#Ablagestapel>div{
-    background-color: var(--weiss);
+#Ablegestapel>div{
     width: 80px;
     height: 120px;
     border-radius: 5px;
-    position: absolute;
-    top: 380px;
+    position: relative;
+    top: 150px;
     left: 700px;
-    border: var(--weiss);
     text-align: center;
-    color: var(--weiss);
+    color: var(--schwarz);
+    font-size: 40pt;
+    font-weight: bolder;
+    
 }
 #Ablagestapel>div>p{
     font-size: 20pt;
+    color: var(--weiss);
+}
+#Ablegestapel>div>p>i{
+    color: var(--weiss);
+    
 }
 #Ziehkarten{
     background-color: var(--dunkelgrau);
@@ -166,10 +171,10 @@ a{
     width: 80px;
     height: 120px;
     border-radius: 10px;
-    background:var(--weiss);
+    
     display: inline-flex;
     margin: 10px;
-    top: 400px;
+    top: 250px;
 }
 #SpielerKarten>div:hover{
     width: 85px;

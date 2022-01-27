@@ -32,7 +32,12 @@ for (var y: number = 0; y < 5; y++) {
     spielerkarten.push(ziehkarten.pop());
     computerkarten.push(ziehkarten.pop());
 }
+
+
 ablagekarten.push(ziehkarten.pop());
+
+
+
 window.addEventListener("load", function(): void {
 var myTurn: boolean = true;
 var endGame: boolean = false;
