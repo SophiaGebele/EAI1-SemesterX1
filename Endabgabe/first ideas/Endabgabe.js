@@ -5,8 +5,8 @@
 //#####################################################################################################
 //#####################################################################################################
 //Variable und deren Werte fuer die Funtionalitaet der "functions"
-const Wert = ["1", "2", "3", "4", "5", "6", "7", "8"];
-const Farbe = ["blau", "gruen", "rot", "gelb"];
+var Wert = ["1", "2", "3", "4", "5", "6", "7", "8"];
+var Farbe = ["blau", "gruen", "rot", "gelb"]; //hexacode ohne anfuehrungsstriche
 var counterSpieler = 0;
 var counterComputer = 0;
 var x = 0;
@@ -79,16 +79,13 @@ window.addEventListener("load", function () {
     //#####################################################################################################
     //CreateElements in HTML
     function Karten(Spielkarte) {
-        console.log(deck.length, "fuuu");
         document.getElementById("Kartendedeck");
         for (let indexFarbe = 0; indexFarbe < deck.length; indexFarbe++) {
-            let Karte = document.getElementById("Karten32");
-            let Wert = document.getElementById("Wertigkeit");
+            let Spielkarte = document.getElementById("Karten32");
             let Farbe = document.createElement("div");
             Farbe.className = "Farben" + Spielkarte[indexFarbe].Farben;
-            Wert.innerHTML = deck[indexFarbe].Werte;
-            Karte.appendChild(Wert);
-            Karte.appendChild(Farbe); //Karte hat nun Wert und Farbe als Kinder
+            Wert.classList("Wertigkeiten");
+            Karten.appendChild(Farbe); //Karte hat nun Wert und Farbe als Kinder
             document.getElementById("Kartendeck").appendChild(Karte);
         }
     }

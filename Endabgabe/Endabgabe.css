@@ -3,7 +3,7 @@
     --weiss:#fff;
     --schwarz:#000; 
     --dunkelgrau:#303030;
-    --gelb:#ffd700;
+    --gelb:#cccc00;
     --blau:#0028ff;
     --rot:#ff0000;
     --gruen:#228b22;
@@ -11,12 +11,24 @@
 }
 
 
-/*ALLGEMEINES KARTENDESIGN*/
-
-
-
-
-
+/*Das Farbenspektrum meines Kartenspiels*/
+.blau{
+    background-color: var(--blau);
+    color: var(--weiss);
+}
+.gelb{
+    background-color: var(--gelb);
+    z-index: 0;
+    color: var(--weiss);
+}
+.gruen{
+    background-color: var(--gruen);
+    color: var(--weiss);
+}
+.rot{
+    background-color: var(--rot);
+    color: var(--weiss);
+}
 
 
 /*Allgemeine Deklaration und Texte*/
@@ -76,7 +88,7 @@ a{
 
 
 
-/*Spielkarten-Layout fuer Spieler*/
+/*Spielkarten-Layout im Prinzip*/
 .BasicKarte{
     width: 200px;
     height: 350px;
@@ -86,31 +98,30 @@ a{
 
 
 /*Station fuer Computerdeck*/
-.ComputerKarten{
-    width:500px;
-    height:100px;
-    background-color: var(--dunkelgrau);
-    position: absolute;
-    border-radius: 15px;
-    top: 200px;
-    left: 470px;
-}
-#Karte0{
-    top: 7px;
-    left: 10px;
+#ComputerKarten>div{
+    width: 80px;
+    height:120px;
+    background-color: var(--weiss);
     position: relative;
-    width: 60px;
-    height: 80px;
-    border-radius: 5px;
-    border-style:solid;
-    border-color: var(--rot), var(--gruen), var(--blau), var(--gelb);
-    background:var(--weiss);
-    }
- #Back{
-    width: 50px;
-    height: 70px;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-radius:10px ;
+    display: inline-flex;
+    margin: 10px;
+    top: 100px;
+}
+#ComputerKarten>div>p{
+    font-size: 20pt;
+    color: var(--schwarz);
+}
+#ComputerKarten>div>i{
+    font-size: 20pt;
+    color: var(--schwarz);
+
+}
+#Back{
+    width: 70px;
+    height: 110px;
+    border-bottom-left-radius: 500px;
+    border-top-right-radius: 500px;
     background-color: var(--hellgrau);
     top: 5px;
     left: 5px;
@@ -119,64 +130,73 @@ a{
     
 
 /*Station fuer Karten in der Mitte zum ziehen und ablegen*/
-#Karten32{
-    background-color: var(--dunkelgrau);
-    opacity: 40%;
-    width:230px;
-    height: 150px;
-    border-radius: 15px;
+
+#Ablagestapel>div{
+    background-color: var(--weiss);
+    width: 80px;
+    height: 120px;
+    border-radius: 5px;
     position: absolute;
-    top: 330px;
-    left: 800px;
+    top: 380px;
+    left: 700px;
     border: var(--weiss);
     text-align: center;
+    color: var(--weiss);
+}
+#Ablagestapel>div>p{
+    font-size: 20pt;
 }
 #Ziehkarten{
     background-color: var(--dunkelgrau);
-    opacity: 40%;
-    height: 150px;
+    height: 120px;
     position: absolute;
-    width:230px;
-    border-radius: 15px;
-    left: 420px;
-    top: 330px;
+    width: 80px;
+    border-radius: 5px;
+    left: 600px;
+    top: 380px;
     text-align: center;
 }
 
-/*Station fuer Spielerdeck*/
-.SpielerKarten{
-    width: 800px;
-    height: 250px;
-    background-color: var(--weiss);
+
+
+
+/*Station fuer Spielerdeck und*/
+#SpielerKarten div{
     position: relative;
-    border-radius: 15px;
-    bottom: 50px;
-    left: 330px;
+    width: 80px;
+    height: 120px;
+    border-radius: 10px;
+    background:var(--weiss);
+    display: inline-flex;
+    margin: 10px;
     top: 400px;
 }
-#Karte1{
-    width: 190px;
-    height: 240px;
-    background-color: var(--rot);
-    position: relative;
-    top: 5px;
-    left: 5px;
-    border-radius: 15px;
+#SpielerKarten>div:hover{
+    width: 85px;
+    height: 125px;
 }
-#Platzhalter{
-    width: 150px;
-    height:150px;
-    border-radius: 100px;
-    background-color: var(--weiss);
-    position: relative;
-    top: 45px;
-    left: 20px;
-    color: var(--schwarz);
-}
-#Wertigkeit{
-    color: var(--schwarz);
-    font-size: 30pt;
+
+#SpielerKarten>div>p,#ComputerKarten>div>p{
+    z-index: 2;
+    font-size: 40pt;
     font-weight:bolder;
-    top: 50px;
+    top: -50px;
+    left: 25px;
+    text-align: center;
     position: relative;
+    color:var(--schwarz);
+}
+
+#SpielerKarten>div>p>i, #ComputerKarten>div>p>i{
+    z-index: 1;
+    left: -50px;
+    top: 50px;
+    font-size: 20pt;
+    position: relative;
+}
+
+#ComputerKarten>div:hover{
+    opacity: 50%;
+    /*senken der opacity um dem Spieler zu zeigen, 
+    /*dass diese Karten fuer ihn nicht klickbar sind. */
 }

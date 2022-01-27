@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(1, 145, 1);
+    width: 800px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+#spielerkarten {
+    background-color: darkgreen;
+    border: black;
+    border-width: 0.1em;
+    border-style: solid;
+    height: 100px;
+    transition: transform 2s;
+}
+#computerkarten {
+    background-color: darkgreen;
+    border: black;
+    border-width: 0.1em;
+    border-style: solid;
+    border-top: none;
+    height: 100px;
+}
+#spielerkarten div {
+    width: 35px;
+    height: 50px;
+    margin: 5px;
+    display: inline-flex;
+    border-radius: 0.3em; 
+    box-shadow: 0px 0px 5px #0d0c0c;
+}
+#spielerkarten div:hover {
+    transform:scale(1.05);
+}
+#test:hover {
+    transform:scale(1.05);
+}
+#spielerkarten div p {
+    margin-top: 0;
+}
+#ablagekarten div p {
+    margin-top: 0;
+}
+#computerkarten div {
+    width: 35px;
+    height: 50px;
+    margin: 5px;
+    display: inline-flex;
+    border-radius: 0.3em;
+    background-image: url(backgroundcards.jpg);
+    box-shadow: 0px 0px 5px #0d0c0c;
+    background-size: 35px 50px;
+}
+#ablagekarten div {
+    display: inline-flex;
+    width: 35px;
+    height: 50px;
+    border-radius: 0.3em;
+    box-shadow: 0px 0px 5px #0d0c0c;
+    position: relative;
+}
+#test {
+    background-color: white;
+    display: inline-flex;
+    width: 35px;
+    height: 50px;
+    border-radius: 0.3em;
+    background-image: url(backgroundcards.jpg);
+    box-shadow: 4px 4px 0px #0d0c0c;
+    position: absolute;
+    left: 15%;
+    top: 205px;
+    transition: transform 420ms;
+    background-size: 35px 50px;
+}
+.herz {
+    background-image: url(herz.png);
+    background-size: 35px 50px;
+}
+.karo {
+    background-image: url(karo.png);
+    background-size: 35px 50px;
+}
+.pik {
+    background-image: url(pik.png);
+    background-size: 35px 50px;
+}
+.kreuz {
+    background-image: url(kreuz.png);
+    background-size: 35px 50px;
+}
+.gewinn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
