@@ -151,7 +151,7 @@ a{
     color: var(--weiss);
     
 }
-#Ziehkarten{
+#Ziehstapel{
     background-color: var(--dunkelgrau);
     height: 120px;
     position: absolute;

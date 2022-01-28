@@ -1,6 +1,8 @@
+//hier sind die vier vesrschiedenen Farben und die Zahen 1-8 in Arrays gespiechert
+//diese werte werden jeweils and die SpielKarten weitergegeben. 
 var farben = ["blau", "rot", "gruen", "gelb"];
 var werte = ["1", "2", "3", "4", "5", "6", "7", "8"];
-//Arrays
+//Arrays fuer den Ziehstapel und dern Ablegestapel
 var Ziehstapel = [];
 var Ablegestapel = [];
 for (var a = 0; a < farben.length; a++) {
@@ -30,6 +32,12 @@ for (var c = 0; c < 4; c++) {
 }
 Ablegestapel.push(Ziehstapel.pop()); //eine Karte auf ablagestapel
 window.addEventListener("load", function () {
+    document.getElementById("Ziehstapel").addEventListener("click", function () {
+        //
+        SpielerKarten.push(Ziehstapel.pop());
+        Aktualisierung();
+        ComputerRunde();
+    });
     console.log(Ablegestapel.length, "Ablegestapel");
     console.log(Ziehstapel.length, "Ziehstapel");
     console.log(SpielerKarten.length, "Spielerkarten");
@@ -37,20 +45,17 @@ window.addEventListener("load", function () {
     var SpielerRunde = true;
     var Spielende = false;
     Aktualisierung();
-    console.log(Ablegestapel.length, "Ablegestapel2");
-    console.log(Ziehstapel.length, "Ziehstapel2");
-    console.log(SpielerKarten.length, "Spielerkarten2");
-    console.log(ComputerKarten.length, "ComputerKarten2");
     document.getElementById("Ziehstapel").addEventListener("click", function () {
         ZiehenSpieler();
     });
     function ZiehenComputer() {
-        computerkarten.push(Ziehstapel.pop());
+        ComputerKarten.push(Ziehstapel.pop());
         SpielerEnde();
     }
     function ZiehenSpieler() {
         if (!Spielende) {
-            SpielerKarten.push(Ziehstapel.pop());
+            SpielerKarten.push(Ziehstapel.pop);
+            console.log(SpielerKarten, "heeeeee");
             SpielerEnde();
         }
     }
@@ -58,7 +63,7 @@ window.addEventListener("load", function () {
         //document.getElementById("Ablegestapel").innerHTML=""; //leeren 
         document.getElementById("ComputerKarten").innerHTML = ""; //leeren
         document.getElementById("SpielerKarten").innerHTML = ""; //leeren
-        for (var d = 0; d < SpielerKarten.length; d++) {
+        for (let d = 0; d < SpielerKarten.length; d++) {
             var BasicKarte = document.createElement("div");
             var werte = document.createElement("p");
             werte.innerHTML = SpielerKarten[d].wertigkeit;
@@ -71,17 +76,17 @@ window.addEventListener("load", function () {
             BasicKarte.appendChild(werte);
             werte.appendChild(farben);
             BasicKarte.className = SpielerKarten[d].farbspektrum;
-            if (SpielerRunde = true) {
+            if (SpielerRunde == true) { //hier Zeile 115
                 if (SpielerKarten[d].farbspektrum == Ablegestapel[0].farbspektrum ||
                     SpielerKarten[d].wertigkeit == Ablegestapel[0].wertigkeit) {
                     BasicKarte.addEventListener("click", function () {
                         if (!Spielende) {
-                            SpielerKarten.splice(d, 1),
-                                Ablegestapel.unshift(SpielerKarten[d]),
-                                SpielerEnde();
+                            //Ablegestapel.unshift(BasicKarte);
+                            Ablegestapel.unshift(SpielerKarten[d]), SpielerKarten.splice(d, 1);
+                            SpielerKarten.push(d, 1);
+                            SpielerEnde();
                         }
-                    });
-                    console.log(SpielerKarten.length);
+                    }); //hier
                 }
             }
         }
@@ -112,26 +117,28 @@ window.addEventListener("load", function () {
     }
     function SpielerEnde() {
         SpielerRunde = !SpielerRunde;
-        Aktualisierung();
-        if (SpielerKarten[0] == undefined) {
+        Aktualisierung(); //hier
+        if (SpielerKarten.length == 0) //veraenderung Spielerkarten[0]==undefined
+         {
             var Gewonnen = document.createElement("p");
-            document.getElementById("test").appendChild(Gewonnen);
+            document.getElementById("Fenster").appendChild(Gewonnen);
             Gewonnen.innerHTML = "Du hast Gewonnen! Glueckwunsch!";
             Spielende = true;
         }
-        else if (ComputerKarten[0] == undefined) {
+        else if (ComputerKarten.length = 0) //auch veraendert
+         {
             var Verloren = document.createElement("p");
-            document.getElementById("test").appendChild(Verloren);
+            document.getElementById("Fenster2").appendChild(Verloren);
             Verloren.innerHTML = "Du Hast verloren!";
             Spielende = true;
         }
         else {
-            if (Ziehstapel[0] == undefined) {
+            if (Ziehstapel.length == 0) {
                 for (var f = 0; f < Ablegestapel.length; f++) {
                     if (Ablegestapel[f + 1] != undefined) {
                         Ziehstapel.push(Ablegestapel[f + 1]);
                         Ablegestapel.splice(f + 1, 1);
-                        shuffle(Ziehstapel);
+                        mischen(Ziehstapel);
                     }
                 }
             }
@@ -142,11 +149,13 @@ window.addEventListener("load", function () {
     }
     function ComputerRunde() {
         for (let g = 0; g < ComputerKarten.length; g++) {
+            console.log(Ablegestapel[0]);
             if (ComputerKarten[g].farbspektrum == Ablegestapel[0].farbspektrum ||
-                ComputerKarten[g].Wertigkeit == Ablegestapel[0].Wertigkeit) {
+                ComputerKarten[g].wertigkeit == Ablegestapel[0].wertigkeit) {
                 Ablegestapel.unshift(ComputerKarten[g]), ComputerKarten.splice(g, 1);
+                console.log(ComputerKarten, "huuu");
                 SpielerEnde();
-                break;
+                break; //damit nur eine karte gelegt wird
             }
         }
         if (!SpielerEnde) {
